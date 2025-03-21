@@ -1,0 +1,103 @@
+h1,p,body{
+  /*h1,p,body要素の上下左右余白(margin)を0にする*/
+  margin:0;
+  padding:0;
+}
+
+p,a{
+  /*p要素とa要素のフォントサイズを20pxとする*/
+  font-size:20px;
+}
+
+header{
+  /*下の余白を20pxにする*/
+  margin-bottom:20px;
+  /*背景色を「rgb(244,79,79)」にする*/
+  background-color:rgb(244,79,79);
+  /*中の要素が中央揃えになるようにする*/
+  text-align:center;
+}
+
+h1{
+  /*文字色をrgb(255,255,255)にする*/
+  color:rgb(255,255,255);
+}
+
+main{
+  /*main要素内の余白を上下左右とも10pxにする*/
+  padding:10px;
+}
+
+#parent{
+  display:flex;
+  justify-content:space-around;
+}
+
+.contents{
+  border:solid 3px rgb(238,204,204);
+  flex-basis:25%;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:15px;
+  padding-right:15px;
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:0px;
+  margin-right:0px;
+  text-align:center;
+}
+
+h2{
+  font-size:25px;
+  border-bottom:3px dotted rgb(236,122,122);
+}
+
+h2::before{
+  content:"●";
+  color:rgb(239,111,139);
+}
+
+.contents p:nth-of-type(2)::first-letter{
+  font-weight:bold;
+  color:rgb(97,206,249);
+}
+
+.contents img{
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-left:0px;
+  margin-right:0px;
+  width:70%;
+}
+
+footer{
+  background-color:rgb(244,79,79);
+  text-align:center;
+}
+
+a{
+  color:rgb(255,255,255);
+}
+a:visited{
+  color:rgb(193,234,251);
+}
+a:hover{
+  color:rgb(245,178,168);
+}
+
+#parent{
+  display: flex;
+  flex-direction: row;
+}
+
+@media(max-width: 768px){
+  h2{
+    font-size: 30px;
+  }
+  p{
+    font-size: 25px;
+  }
+  #parent{
+    flex-direction: column;
+  }
+}
